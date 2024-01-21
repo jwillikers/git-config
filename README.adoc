@@ -56,7 +56,7 @@ git -C ~/Projects clone git@github.com:jwillikers/git-config.git
 +
 [,sh]
 ----
-cp config/work.inc.template to config/work.inc
+cp config/work.inc.template config/work.inc
 ----
 
 . Replace the example email with the work email account. 
