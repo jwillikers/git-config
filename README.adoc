@@ -1,0 +1,82 @@
+= Git Config
+Jordan Williams <jordan@jwillikers.com>
+:experimental:
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:delta: https://dandavison.github.io/delta/[delta]
+:Git: https://git-scm.org/[Git]
+
+My configuration for {Git}.
+
+== Usage
+
+This repository contains the configuration file for {Git}.
+This file is synchronized using this Git repository.
+The following instructions detail how to use and sync this repository.
+
+=== Install
+
+Install these settings with the following instructions.
+The instructions target a Fedora Atomic system.
+{delta} is used to provide syntax highlighting on the command-line.
+
+. Install the `git-credential-libsecret`, `git-delta`, and `pre-commit` packages.
++
+[,sh]
+----
+sudo rpm-ostree install git-credential-libsecret git-delta pre-commit
+----
+
+. Reboot to apply the changes.
++
+[,sh]
+----
+sudo systemctl reboot
+----
+
+. Clone this repository.
++
+[,sh]
+----
+git -C ~/Projects clone git@github.com:jwillikers/git-config.git
+----
+
+. Copy the `work.inc.template` file to `work.inc`.
++
+[,sh]
+----
+cp config/work.inc.template to config/work.inc
+----
+
+. Replace the example email with the work email account. 
+All projects under the `~/Projects/Work` directory will use the Git configuration in this file.
+
+. Symlink the configuration directory `config` to the `~/.config/git` directory.
++
+[,sh]
+----
+ln --relative --symbolic --force ~/Projects/git-config/config ~/.config/git
+----
+
+== Code of Conduct
+
+Please refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
+
+== License
+
+This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3].
+Please refer to the bundled link:LICENSE.adoc[license].
+
+== Copyright
+
+© 2020-2024 Jordan Williams
+
+== Authors
+
+mailto:{email}[{author}]
