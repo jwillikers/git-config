@@ -18,7 +18,7 @@
 	program = /usr/bin/gpg
 [init]
 	defaultBranch = main
-    templateDir = ./template
+	templateDir = config/template
 [include]
 	path = code.inc
 	path = delta.inc
