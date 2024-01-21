@@ -1,10 +1,13 @@
 {
     "cSpell.words": [
         "adoc",
+        "difftool",
         "ifdef",
         "jwillikers",
         "libsecret",
+        "mergetool",
         "mkdir",
-        "ostree"
+        "ostree",
+        "templatedir"
     ]
 }
