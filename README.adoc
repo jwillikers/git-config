@@ -11,20 +11,25 @@ ifdef::env-github[]
 endif::[]
 :delta: https://dandavison.github.io/delta/[delta]
 :Git: https://git-scm.org/[Git]
+:pre-commit: https://pre-commit.com/[pre-commit]
+:Sublime-Merge: https://www.sublimemerge.com/[Sublime Merge]
+:Visual-Studio-Code: https://code.visualstudio.com/[Visual Studio Code]
 
 My configuration for {Git}.
+
+The configuration uses {Visual-Studio-Code} as the editor and {Sublime-Merge} as the merge tool.
+{delta} is used to provide syntax highlighting on the command-line.
 
 == Usage
 
 This repository contains the configuration file for {Git}.
 This file is synchronized using this Git repository.
-The following instructions detail how to use and sync this repository.
+The following instructions detail how to use this repository.
 
 === Install
 
 Install these settings with the following instructions.
 The instructions target a Fedora Atomic system.
-{delta} is used to provide syntax highlighting on the command-line.
 
 . Install the `git-credential-libsecret`, `git-delta`, and `pre-commit` packages.
 +
