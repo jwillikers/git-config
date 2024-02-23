@@ -1,7 +1,11 @@
+[branch]
+    sort = -committerdate
 [color]
-	ui = auto
+    ui = auto
 [commit]
-	gpgSign = true
+    gpgSign = true
+[diff]
+    algorithm = histogram
 [fetch]
 	prune = true
 [gpg]
@@ -16,10 +20,17 @@
 [init]
 	defaultBranch = main
 	templateDir = config/template
+[merge]
+    conflictstyle = diff3
 [pull]
 	rebase = true
 [push]
+	autoSetupRemote = true
 	gpgSign = if-asked
+[rebase]
+    rebaseMerges = true
+[rerere]
+	enabled = true
 [tag]
 	gpgSign = true
 [user]
