@@ -1,7 +1,7 @@
-[user]
-	email = user@example.com
-	signingKey = ""
 [commit]
 	gpgSign = false
 [tag]
 	gpgSign = false
+[user]
+	email = user@example.com
+	signingKey = ""

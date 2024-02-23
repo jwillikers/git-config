@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "adoc",
+        "conflictstyle",
         "difftool",
         "ifdef",
         "jwillikers",
@@ -8,6 +9,7 @@
         "mergetool",
         "mkdir",
         "ostree",
+        "smerge",
         "templatedir"
     ]
 }

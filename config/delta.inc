@@ -1,22 +1,10 @@
 [core]
     pager = delta
 
-[merge]
-    conflictstyle = diff3
-
-[diff]
-    colorMoved = default
-
-[interactive]
-    diffFilter = delta --color-only --features=interactive
-
 [delta]
     features = decorations
     line-numbers = true
     syntax-theme = "Solarized (dark)"
-
-[delta "interactive"]
-    keep-plus-minus-markers = false
 
 [delta "decorations"]
     commit-decoration-style = blue ol
@@ -26,3 +14,15 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[diff]
+    colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[merge]
+    conflictstyle = diff3

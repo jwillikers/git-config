@@ -1,24 +1,11 @@
-[user]
-	name = Jordan Williams
-	email = jordan@jwillikers.com
-	signingKey = A6AB406AF5F1DE02CEA3B6F09FB42B0E7F657D8C
 [color]
 	ui = auto
 [commit]
 	gpgSign = true
-[tag]
-	gpgSign = true
-[pull]
-	rebase = true
-[push]
-	gpgSign = if-asked
 [fetch]
 	prune = true
 [gpg]
 	program = /usr/bin/gpg
-[init]
-	defaultBranch = main
-	templateDir = config/template
 [include]
 	path = code.inc
 	path = delta.inc
@@ -26,3 +13,16 @@
 	path = smerge.inc
 [includeIf "gitdir:~/Projects/Work/"]
 	path = ~/.config/git/work.inc
+[init]
+	defaultBranch = main
+	templateDir = config/template
+[pull]
+	rebase = true
+[push]
+	gpgSign = if-asked
+[tag]
+	gpgSign = true
+[user]
+	email = jordan@jwillikers.com
+	name = Jordan Williams
+	signingKey = A6AB406AF5F1DE02CEA3B6F09FB42B0E7F657D8C
