@@ -4,6 +4,7 @@
         "conflictstyle",
         "difftool",
         "ifdef",
+        "justfile",
         "jwillikers",
         "libsecret",
         "mergetool",

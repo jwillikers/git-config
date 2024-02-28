@@ -11,6 +11,7 @@ ifdef::env-github[]
 endif::[]
 :delta: https://dandavison.github.io/delta/[delta]
 :Git: https://git-scm.org/[Git]
+:just: https://github.com/casey/just[just]
 :pre-commit: https://pre-commit.com/[pre-commit]
 :Sublime-Merge: https://www.sublimemerge.com/[Sublime Merge]
 :Visual-Studio-Code: https://code.visualstudio.com/[Visual Studio Code]
@@ -31,42 +32,37 @@ The following instructions detail how to use this repository.
 Install these settings with the following instructions.
 The instructions target a Fedora Atomic system.
 
-. Install the `git-credential-libsecret`, `git-delta`, and `pre-commit` packages.
-+
-[,sh]
-----
-sudo rpm-ostree install git-credential-libsecret git-delta pre-commit
-----
-
-. Reboot to apply the changes.
-+
-[,sh]
-----
-sudo systemctl reboot
-----
+. Install {just} by following the instructions in the https://github.com/casey/just?tab=readme-ov-file#installation[installation section].
 
 . Clone this repository.
 +
 [,sh]
 ----
-git -C ~/Projects clone git@github.com:jwillikers/git-config.git
+git clone git@github.com:jwillikers/git-config.git
 ----
 
-. Copy the `work.inc.template` file to `work.inc`.
+. Change to the project's directory.
 +
 [,sh]
 ----
-cp config/work.inc.template config/work.inc
+cd git-config
 ----
 
-. Replace the example email with the work email account. 
+. Run `just` to install the config.
++
+[,sh]
+----
+just
+----
+
+. Replace the example email with the work email account in `config/work.inc`.
 All projects under the `~/Projects/Work` directory will use the Git configuration in this file.
 
-. Symlink the configuration directory `config` to the `~/.config/git` directory.
+. On Fedora Atomic, reboot to finish installing the necessary packages.
 +
 [,sh]
 ----
-ln --relative --symbolic --force ~/Projects/git-config/config ~/.config/git
+sudo systemctl reboot
 ----
 
 == References
