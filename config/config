@@ -15,8 +15,6 @@
 	path = delta.inc
 	path = git-credential-libsecret.inc
 	path = smerge.inc
-[includeIf "gitdir:~/Projects/Work/"]
-	path = ~/.config/git/work.inc
 [init]
 	defaultBranch = main
 	templateDir = config/template
@@ -37,3 +35,7 @@
 	email = jordan@jwillikers.com
 	name = Jordan Williams
 	signingKey = A6AB406AF5F1DE02CEA3B6F09FB42B0E7F657D8C
+
+# Included last to override previous settings.
+[includeIf "gitdir:~/Projects/Work/"]
+	path = work.inc
