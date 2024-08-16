@@ -6,4 +6,4 @@
 	gpgSign = false
 [user]
 	email = user@example.com
-	signingKey = ""
+	signingKey =
