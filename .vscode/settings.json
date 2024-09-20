@@ -13,5 +13,6 @@
         "ostree",
         "smerge",
         "templatedir"
-    ]
+    ],
+    "asciidoc.antora.enableAntoraSupport": false
 }
