@@ -15,9 +15,10 @@ install:
         if [ "$variant" = "container" ]; then
             sudo dnf --assumeyes install git-credential-libsecret git-delta pre-commit
         elif [ "$variant" = "iot" ] || [ "$variant" = "sericea" ]; then
-            sudo rpm-ostree install git-credential-libsecret git-delta pre-commit
+            sudo rpm-ostree install --idempotent gcr git-credential-libsecret git-delta pre-commit
             echo "Reboot to finish installation."
         fi
     fi
     cp --update=none config/work.inc.template config/work.inc
     ln --force --no-dereference --relative --symbolic config "{{ config_directory() }}/git"
+    systemctl --user enable --now gcr-ssh-agent.socket
