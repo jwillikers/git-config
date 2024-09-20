@@ -14,7 +14,7 @@ install:
         variant=$(awk -F= '$1=="VARIANT_ID" { print $2 ;}' /etc/os-release)
         if [ "$variant" = "container" ]; then
             sudo dnf --assumeyes install git-credential-libsecret git-delta pre-commit
-        elif [ "$variant" = "iot" ] || [ "$variant" = "sericea" ]; then
+        elif [ "$variant" = "iot" ] || [[ "$variant" = *-atomic ]]; then
             sudo rpm-ostree install --idempotent gcr git-credential-libsecret git-delta pre-commit
             echo "Reboot to finish installation."
         fi
